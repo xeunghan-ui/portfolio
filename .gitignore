@@ -1,0 +1,16 @@
+# 비공개·내부 문서 (게시 제외)
+*.pdf
+_협업가이드.md
+_한글-텍스트-다듬기-지침.md
+_밖승한-bak-인수인계.md
+아웃도어-레이더-디자인시스템.md
+
+# 프로토타입 (게시 제외)
+bak-cinematic-prototype.html
+bak-map-prototype.html
+
+# 작업용 임시 폴더
+깃허브-업로드용/
+
+# 시스템 파일
+.DS_Store
