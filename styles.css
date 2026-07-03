@@ -357,3 +357,15 @@ body.bak .hero-stats{display:none}
 .radar-rings g{stroke:var(--green)}
 
 .mode-toggle.float{position:fixed;right:20px;bottom:20px;z-index:60;background:rgba(3,19,12,.92);backdrop-filter:blur(8px);box-shadow:0 6px 18px rgba(0,0,0,.45)}
+
+/* 레퍼런스 더보기 (긴 후기 접기) */
+.rec .quote{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;}
+.rec.expanded .quote{display:block;-webkit-line-clamp:unset;overflow:visible;}
+.rec .more-btn{margin-top:8px;background:none;border:0;color:var(--green);font:inherit;font-size:.85rem;cursor:pointer;padding:0;opacity:.85;}
+.rec .more-btn:hover{opacity:1;text-decoration:underline;}
+
+/* 폰(≤600px): WORK·사이드 카드 1컬럼 */
+@media(max-width:600px){
+  .work-grid{grid-template-columns:1fr}
+  .personal-grid{grid-template-columns:1fr}
+}
