@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://xeunghan-ui.github.io/portfolio/assets/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 <meta property="og:url" content="https://xeunghan-ui.github.io/portfolio/">
 <link rel="canonical" href="https://xeunghan-ui.github.io/portfolio/">
 <meta name="twitter:card" content="summary_large_image">
@@ -164,6 +164,22 @@
     </div>
   </div>
 </section>
+
+  <section id="showreel">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">// SHOWREEL</div>
+        <h2>영상으로 먼저 보기</h2>
+        <p>기획부터 현장·콘텐츠까지, 대표 작업을 담은 영상입니다.</p>
+      </div>
+      <div class="reel-grid reveal">
+        <div class="reel" data-vid="oyO6Iqnfph4"><div class="reel-thumb" style="background-image:url('https://i.ytimg.com/vi/oyO6Iqnfph4/hqdefault.jpg')"><span class="reel-play">▶</span></div><div class="reel-cap">몽벨 크루 백패킹</div></div>
+        <div class="reel" data-vid="F1Rm651AVms"><div class="reel-thumb" style="background-image:url('https://i.ytimg.com/vi/F1Rm651AVms/hqdefault.jpg')"><span class="reel-play">▶</span></div><div class="reel-cap">이상한 나라의 큰애기</div></div>
+        <div class="reel" data-vid="7W54EqPGbT4"><div class="reel-thumb" style="background-image:url('https://i.ytimg.com/vi/7W54EqPGbT4/hqdefault.jpg')"><span class="reel-play">▶</span></div><div class="reel-cap">뉴미들클래스 스케치</div></div>
+        <div class="reel" data-vid="wFeKnIF0NpQ"><div class="reel-thumb" style="background-image:url('https://i.ytimg.com/vi/wFeKnIF0NpQ/hqdefault.jpg')"><span class="reel-play">▶</span></div><div class="reel-cap">우당탕탕 카자흐스탄</div></div>
+      </div>
+    </div>
+  </section>
 
 <section id="work">
   <div class="wrap">
@@ -522,6 +538,14 @@ document.querySelectorAll('#recs .rec').forEach(rec=>{
       b.addEventListener('click',()=>{const o=rec.classList.toggle('expanded');b.textContent=o?'접기':'더보기';});
       q.after(b);
     }
+  });
+});
+</script>
+<script>
+document.querySelectorAll('#showreel .reel').forEach(function(r){
+  r.addEventListener('click',function(){
+    var t=r.querySelector('.reel-thumb'); if(t.querySelector('iframe'))return;
+    t.innerHTML='<iframe src="https://www.youtube.com/embed/'+r.getAttribute('data-vid')+'?autoplay=1&rel=0" title="영상" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';
   });
 });
 </script>
