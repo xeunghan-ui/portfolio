@@ -370,3 +370,28 @@ body.bak .hero-stats{display:none}
   .work-grid{grid-template-columns:1fr}
   .personal-grid{grid-template-columns:1fr}
 }
+
+/* ===== 케이스 보강: 목표·협업·회고·성과막대 ===== */
+.goals{display:flex;flex-direction:column;gap:13px}
+.goal{display:flex;gap:13px;align-items:baseline}
+.goal-k{flex:0 0 auto;font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--green);background:rgba(45,255,158,.08);border:1px solid var(--line);border-radius:5px;padding:4px 10px;white-space:nowrap}
+.goal p{margin:0;font-size:14.5px;color:var(--text);line-height:1.6}
+.kmetric-line{margin-top:18px;border-top:1px solid var(--line);padding-top:16px;font-size:14px;color:var(--muted-s);line-height:1.75}
+.kmetric-line .kmetric-k{font-family:var(--mono);font-size:11px;letter-spacing:.4px;color:var(--green);margin-right:11px}
+.collab{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.collab li{display:flex;gap:14px;align-items:baseline;font-size:14.5px;color:var(--text);line-height:1.55}
+.collab-k{flex:0 0 74px;font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--green-dim)}
+.my-role{margin-top:18px;border-top:1px solid var(--line);padding-top:16px;font-size:14.5px;color:var(--text);line-height:1.6}
+.my-role-k{font-family:var(--mono);font-size:11px;letter-spacing:.4px;color:var(--green);margin-right:11px}
+.my-role b{color:var(--green);font-weight:600;margin-left:8px}
+.perf-bars{display:flex;flex-direction:column;gap:15px;margin-top:24px;border-top:1px solid var(--line);padding-top:22px}
+.pbar-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:7px}
+.pbar-label{font-size:13.5px;color:var(--muted-s)}
+.pbar-val{font-family:var(--mono);font-size:13.5px;color:var(--green);font-weight:600;white-space:nowrap}
+.pbar-track{position:relative;height:10px;background:var(--bg);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.pbar-fill{height:100%;width:var(--v,0%);background:linear-gradient(90deg,var(--green-dim),var(--green))}
+.pbar-track.mark{overflow:visible}
+.pbar-track.mark .pbar-fill{border-radius:6px 0 0 6px}
+.pbar-track.mark::after{content:"";position:absolute;top:-4px;bottom:-4px;left:var(--base,100%);width:2px;background:var(--muted-s);opacity:.75}
+.pbar-cap{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:6px}
+.pbar-rows{display:flex;flex-direction:column;gap:6px;margin-top:2px}
