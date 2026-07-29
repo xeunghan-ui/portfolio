@@ -422,3 +422,8 @@ body.bak .hero-stats{display:none}
 .reel-cap{font-family:var(--mono);font-size:13px;color:var(--muted-s);margin-top:10px}
 @media(max-width:920px){.reel-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.reel-grid{grid-template-columns:1fr}}
+
+/* 대표 이미지 좌우여백 */
+.case-hero.padx .cbg{padding-left:clamp(20px,6vw,100px);padding-right:clamp(20px,6vw,100px)}
+.case-hero.padx:not(.flat) .cbg{background:#0a120d}
+@media(max-width:600px){.case-hero.padx .cbg{padding-left:16px;padding-right:16px}}
