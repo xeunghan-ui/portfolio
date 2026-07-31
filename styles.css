@@ -299,7 +299,7 @@ footer{text-align:center;padding:30px 0 42px;font-family:var(--mono);font-size:1
 .case-body .kpi{flex:1 1 calc(50% - 8px)}
 .case-body .kpi .v{font-size:24px}
 .case-body .press{display:block;border-top:none;margin:0;padding:0}
-.case-vids{display:grid;gap:16px}
+.case-vids{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .case-vids.slider{grid-auto-flow:column;grid-auto-columns:88%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;padding-bottom:10px}
 .case-vids.slider>div{scroll-snap-align:start}
 .case-vids.slider::-webkit-scrollbar{height:6px}
@@ -429,3 +429,12 @@ body.bak .hero-stats{display:none}
 @media(max-width:600px){.case-hero.padx .cbg{padding-left:16px;padding-right:16px}}
 
 .reel-kw{display:block;margin-top:5px;font-family:var(--mono);font-size:11.5px;font-weight:400;letter-spacing:.02em;color:var(--muted)}
+
+/* 하단 다른 프로젝트 카드 */
+.more-projects{padding:30px 0;border-top:1px solid var(--line)}
+.more-projects h2{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--green);text-transform:uppercase;margin-bottom:18px}
+.mp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.mp-card{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);transition:transform .2s,border-color .2s}
+.mp-card:hover{transform:translateY(-3px);border-color:var(--green-dim)}
+.mp-thumb{aspect-ratio:16/10;background-size:cover;background-position:center;background-color:#0a120d}
+.mp-t{display:block;padding:11px 13px;font-size:13px;line-height:1.4;color:var(--text);font-weight:500}
